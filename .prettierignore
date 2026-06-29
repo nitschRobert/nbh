@@ -1,0 +1,7 @@
+# Ignore artifacts
+node_modules
+playwright-report/
+test-results/
+
+# Ignore package manager files
+package-lock.json
