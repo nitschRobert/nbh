@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
+    "check-format": "npx prettier --check .",
     "prettier": "npx prettier --write ."
   },
   "repository": {
