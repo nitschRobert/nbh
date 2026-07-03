@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
+    "test registration": "npx playwright test --grep @registration",
     "check-format": "npx prettier --check .",
     "prettier": "npx prettier --write ."
   },
