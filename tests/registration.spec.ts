@@ -89,9 +89,19 @@ test('User can register a new company account', async ({ page, request }) => {
   await page.getByRole('button', { name: 'Zaloguj się' }).click();
 
   await expect(page).toHaveURL('https://nobadhire.com/company');
-  await expect(page.locator('//*[contains(@class, "text-4xl font-black text-white")]')).toHaveText(companyName);
-  await expect(page.locator('//*[contains(@class, "space-y-2 px-3 py-6 flex-1 overflow-y-auto relative z-10")]')).toBeVisible();
-  await expect(page.locator('//*[contains(@class, "space-y-2 px-3 py-6 flex-1 overflow-y-auto relative z-10")]').locator('//*[contains(@class, "relative group")]')).toHaveCount(8);
+  await expect(page.locator('//*[contains(@class, "text-4xl font-black text-white")]')).toHaveText(
+    companyName
+  );
+  await expect(
+    page.locator(
+      '//*[contains(@class, "space-y-2 px-3 py-6 flex-1 overflow-y-auto relative z-10")]'
+    )
+  ).toBeVisible();
+  await expect(
+    page
+      .locator('//*[contains(@class, "space-y-2 px-3 py-6 flex-1 overflow-y-auto relative z-10")]')
+      .locator('//*[contains(@class, "relative group")]')
+  ).toHaveCount(8);
 
   console.log(`stop`);
 });
